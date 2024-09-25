@@ -63,7 +63,11 @@ SELECT ONLY ONE
 - Check for the presence of an error. If it exists, then set a class property to the error.
 - Check for the presence of an error. If it exists, throw an exception with the error.
 - Check for the presence of an error. If it exists, set a class property to the error, then throw an exception.
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 1551cadb0668057fe0b36c9426fa4fa6bd29b04d
 **ANSWER : Check for the presence of an error. If it exists, throw an exception with the error, because a handler must be clear with the error but easy at the same time.**
 
 6. You have two classes: a database driver and an email driver. Both classes need
