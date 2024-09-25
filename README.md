@@ -12,7 +12,7 @@ SELECT ONLY ONE:
 - DELETE
 - POST
 
-**ANSWER : GET**
+**ANSWER : GET, because it is the one that we use for reading.**
 
 2. You work for a Customer Relationship Management (CRM) company. The
 company's clients gain CRM access through a RESTful API. The CRM allows
@@ -63,12 +63,25 @@ SELECT ONLY ONE
 - Check for the presence of an error. If it exists, then set a class property to the error.
 - Check for the presence of an error. If it exists, throw an exception with the error.
 - Check for the presence of an error. If it exists, set a class property to the error, then throw an exception.
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 1551cadb0668057fe0b36c9426fa4fa6bd29b04d
+
 **ANSWER : Check for the presence of an error. If it exists, throw an exception with the error, because a handler must be clear with the error but easy at the same time.**
+
+EXAMPLE:
+public class APIErrorHandlingExample {
+
+    public static void main(String[] args) {
+        try {
+            URL url = new URL("https://api.example.com/data");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+            int responseCode = connection.getResponseCode();
+            if (responseCode >= 400) {
+                throw new APIException("API error: " + responseCode, responseCode);
+            }
+        } 
+    }
+};
 
 6. You have two classes: a database driver and an email driver. Both classes need
 to set errors so that your front-end interface displays any errors that transpire on
